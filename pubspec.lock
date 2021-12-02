@@ -74,6 +74,13 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
+  layanan:
+    dependency: "direct main"
+    description:
+      path: layanan
+      relative: true
+    source: path
+    version: "0.0.1"
   lints:
     dependency: transitive
     description:
