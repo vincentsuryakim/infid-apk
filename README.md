@@ -1,11 +1,11 @@
 Anggota:
 
-Zeta Prawira Syah (2006484596)
-Vincent Suryakim (2006483252)
-Muhammad Dicky Aria Nugraha (2006483725)
-Pramesti Anjani Putri (2006487364)
-Deyuna Arham Rusmiland (2006483170)
-Farel Muhammad Daffa (2006522865)
+Zeta Prawira Syah (2006484596)\
+Vincent Suryakim (2006483252)\
+Muhammad Dicky Aria Nugraha (2006483725)\
+Pramesti Anjani Putri (2006487364)\
+Deyuna Arham Rusmiland (2006483170)\
+Farel Muhammad Daffa (2006522865)\
 Boy Di Cario (2006485825)
 
 Link Aplikasi:
