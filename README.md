@@ -8,7 +8,7 @@ Deyuna Arham Rusmiland (2006483170)\
 Farel Muhammad Daffa (2006522865)\
 Boy Di Cario (2006485825)
 
-Link Aplikasi:
+Link Aplikasi: [Infid APK](https://github.com/vincentsuryakim/infid-apk/releases/tag/1.0.0%2B1)
 
 Nama Aplikasi: Infid (Informasi COVID-19)
 
