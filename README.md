@@ -14,6 +14,9 @@ Nama Aplikasi: Infid (Informasi COVID-19)
 
 Deskripsi: Infid merupakan website yang berisikan informasi mengenai COVID-19 di Indonesia.
 
+Integrasi dengan Web:
+Wrapper class diimplementasi menggunakan library http dan map untuk cookie-based autentikasi. Kemudian implementasi REST API pada views.py (Django) pakai Django JSON Serializer/JsonResponse. Lalu, implementasi desain/widget sesuai desain aplikasi. Terakhir, integrasikan front-end dan back-end dengan konsep async HTTP.
+
 Manfaat: Memberikan informasi yang lengkap mengenai COVID-19 di Indonesia seperti layananan isolasi mandiri, rumah sakit rujukan, persebaran data COVID19, dll. Kami berharap website dapat digunakan sebaiknya untuk menanggulangi pandemi ini dari Indonesia.
 
 Modul:
