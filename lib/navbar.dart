@@ -57,8 +57,8 @@ class _DrawerScreenState extends State<DrawerScreen> {
             onTilePressed: () {},
           ),
           DrawerListTile(
-            iconData: Icons.arrow_back_rounded,
-            title: "Log out",
+            iconData: Icons.login,
+            title: "Login",
             onTilePressed: () {},
           ),
         ],
