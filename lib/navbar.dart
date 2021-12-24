@@ -85,7 +85,7 @@ class DrawerListTile extends StatelessWidget {
       leading: Icon(iconData),
       title: Text(
         title,
-        style: TextStyle(fontSize: 16),
+        style: const TextStyle(fontSize: 16),
       ),
     );
   }
