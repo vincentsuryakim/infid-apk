@@ -331,22 +331,35 @@ class LayananIsolasi extends State<LayananIsolasiState> {
                             padding: const EdgeInsets.all(10.0),
                             child: ElevatedButton(
                               onPressed: () {
-                                Data newData = Data(
-                                  namaLengkap: namaLengkap.text,
-                                  umur: umur.text,
-                                  kotaKabupaten: kotaKabupaten.text,
-                                  namaIbuKandung: namaIbuKandung.text,
-                                );
-                                addData(newData).then((value) {
+                                if (namaLengkap.text == '' ||
+                                    umur.text == '' ||
+                                    kotaKabupaten.text == '' ||
+                                    namaIbuKandung.text == '') {
                                   ScaffoldMessenger.of(context).showSnackBar(
-                                    SnackBar(
+                                    const SnackBar(
                                       content: Text(
-                                        value,
+                                        'Data tidak lengkap, mohon lengkapi data',
                                       ),
                                     ),
                                   );
-                                });
-                                setState(() {});
+                                } else {
+                                  Data newData = Data(
+                                    namaLengkap: namaLengkap.text,
+                                    umur: umur.text,
+                                    kotaKabupaten: kotaKabupaten.text,
+                                    namaIbuKandung: namaIbuKandung.text,
+                                  );
+                                  addData(newData).then((value) {
+                                    setState(() {});
+                                    ScaffoldMessenger.of(context).showSnackBar(
+                                      SnackBar(
+                                        content: Text(
+                                          value,
+                                        ),
+                                      ),
+                                    );
+                                  });
+                                }
                               },
                               child: const Text("Submit"),
                               style: ButtonStyle(
@@ -400,15 +413,17 @@ class LayananIsolasi extends State<LayananIsolasiState> {
                                           ),
                                         ),
                                       ],
-                                      rows: listData!.map((data) =>
-                                      DataRow(
-                                        cells: [
-                                          DataCell(Text(data.namaLengkap)),
-                                          DataCell(Text(data.umur)),
-                                          DataCell(Text(data.kotaKabupaten)),
-                                          DataCell(Text(data.namaIbuKandung)),
-                                        ]
-                                      )).toList(),
+                                      rows: listData!
+                                          .map((data) => DataRow(cells: [
+                                                DataCell(
+                                                    Text(data.namaLengkap)),
+                                                DataCell(Text(data.umur)),
+                                                DataCell(
+                                                    Text(data.kotaKabupaten)),
+                                                DataCell(
+                                                    Text(data.namaIbuKandung)),
+                                              ]))
+                                          .toList(),
                                     ),
                                   );
                                 } else if (snapshot.hasError) {
