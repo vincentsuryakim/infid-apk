@@ -16,6 +16,13 @@ class LayananIsolasi extends State<LayananIsolasiState> {
   TextEditingController umur = TextEditingController();
   TextEditingController kotaKabupaten = TextEditingController();
   TextEditingController namaIbuKandung = TextEditingController();
+  late Future<List<Data>> _data;
+
+  @override
+  void initState() {
+    super.initState();
+    _data = getData();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -346,7 +353,9 @@ class LayananIsolasi extends State<LayananIsolasiState> {
                                     ),
                                   );
                                 });
-                                setState(() {});
+                                setState(() {
+                                  _data = getData();
+                                });
                               },
                               child: const Text("Submit"),
                               style: ButtonStyle(
@@ -363,7 +372,7 @@ class LayananIsolasi extends State<LayananIsolasiState> {
                             ),
                           ),
                           FutureBuilder<List<Data>>(
-                              future: getData(),
+                              future: _data,
                               builder: (context, snapshot) {
                                 if (snapshot.hasData) {
                                   final List<Data>? listData = snapshot.data;
@@ -400,15 +409,17 @@ class LayananIsolasi extends State<LayananIsolasiState> {
                                           ),
                                         ),
                                       ],
-                                      rows: listData!.map((data) =>
-                                      DataRow(
-                                        cells: [
-                                          DataCell(Text(data.namaLengkap)),
-                                          DataCell(Text(data.umur)),
-                                          DataCell(Text(data.kotaKabupaten)),
-                                          DataCell(Text(data.namaIbuKandung)),
-                                        ]
-                                      )).toList(),
+                                      rows: listData!
+                                          .map((data) => DataRow(cells: [
+                                                DataCell(
+                                                    Text(data.namaLengkap)),
+                                                DataCell(Text(data.umur)),
+                                                DataCell(
+                                                    Text(data.kotaKabupaten)),
+                                                DataCell(
+                                                    Text(data.namaIbuKandung)),
+                                              ]))
+                                          .toList(),
                                     ),
                                   );
                                 } else if (snapshot.hasError) {
