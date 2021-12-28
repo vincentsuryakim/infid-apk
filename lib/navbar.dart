@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:layananisolasi/layananisolasi.dart';
+import 'package:pakar/main.dart';
+import 'main.dart';
 
 class DrawerScreen extends StatefulWidget {
   const DrawerScreen({Key? key}) : super(key: key);
@@ -6,6 +9,7 @@ class DrawerScreen extends StatefulWidget {
   @override
   _DrawerScreenState createState() => _DrawerScreenState();
 }
+
 class _DrawerScreenState extends State<DrawerScreen> {
   @override
   Widget build(BuildContext context) {
@@ -19,12 +23,26 @@ class _DrawerScreenState extends State<DrawerScreen> {
           DrawerListTile(
             iconData: Icons.home,
             title: "Homepage",
-            onTilePressed: () {},
+            onTilePressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => const MyApp(),
+                ),
+              );
+            },
           ),
           DrawerListTile(
             iconData: Icons.healing_outlined,
             title: "Layanan Isolasi Mandiri",
-            onTilePressed: () {},
+            onTilePressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => const LayananIsolasiState(),
+                ),
+              );
+            },
           ),
           DrawerListTile(
             iconData: Icons.coronavirus,
@@ -39,7 +57,14 @@ class _DrawerScreenState extends State<DrawerScreen> {
           DrawerListTile(
             iconData: Icons.person_rounded,
             title: "Tim Pakar COVID-19",
-            onTilePressed: () {},
+            onTilePressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => const TimPakarCovidApp(),
+                ),
+              );
+            },
           ),
           DrawerListTile(
             iconData: Icons.contact_page,
@@ -66,6 +91,7 @@ class _DrawerScreenState extends State<DrawerScreen> {
     );
   }
 }
+
 class DrawerListTile extends StatelessWidget {
   final IconData iconData;
   final String title;
