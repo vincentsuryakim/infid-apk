@@ -102,7 +102,7 @@ class _DrawerScreenState extends State<DrawerScreen> {
               iconData: Icons.person_rounded,
               title: "Tim Pakar COVID-19",
               onTilePressed: () {
-                 Navigator.push(
+                Navigator.push(
                   context,
                   MaterialPageRoute(
                     builder: (context) => const TimPakarCovidApp(),
@@ -140,8 +140,7 @@ class _DrawerScreenState extends State<DrawerScreen> {
                       fontStyle: FontStyle.italic,
                       color: Colors.white),
                 )),
-            Image.network(
-                "https://gitlab.com/zeta.prawira/pbp-lab/-/raw/master/lab_6/lab_6/images/CovidIcon.png")
+            Image.asset("main/CovidIcon.png")
           ],
         ),
       ),
