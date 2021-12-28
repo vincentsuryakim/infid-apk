@@ -16,13 +16,6 @@ class LayananIsolasi extends State<LayananIsolasiState> {
   TextEditingController umur = TextEditingController();
   TextEditingController kotaKabupaten = TextEditingController();
   TextEditingController namaIbuKandung = TextEditingController();
-  late Future<List<Data>> _data;
-
-  @override
-  void initState() {
-    super.initState();
-    _data = getData();
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -338,24 +331,36 @@ class LayananIsolasi extends State<LayananIsolasiState> {
                             padding: const EdgeInsets.all(10.0),
                             child: ElevatedButton(
                               onPressed: () {
-                                Data newData = Data(
-                                  namaLengkap: namaLengkap.text,
-                                  umur: umur.text,
-                                  kotaKabupaten: kotaKabupaten.text,
-                                  namaIbuKandung: namaIbuKandung.text,
-                                );
-                                addData(newData).then((value) {
+                                if (namaLengkap.text == '' ||
+                                    umur.text == '' ||
+                                    kotaKabupaten.text == '' ||
+                                    namaIbuKandung.text == '') {
                                   ScaffoldMessenger.of(context).showSnackBar(
-                                    SnackBar(
+                                    const SnackBar(
                                       content: Text(
-                                        value,
+                                        'Data tidak lengkap, mohon lengkapi data',
                                       ),
                                     ),
                                   );
-                                });
-                                setState(() {
-                                  _data = getData();
-                                });
+                                } else {
+                                  Data newData = Data(
+                                    namaLengkap: namaLengkap.text,
+                                    umur: umur.text,
+                                    kotaKabupaten: kotaKabupaten.text,
+                                    namaIbuKandung: namaIbuKandung.text,
+                                  );
+                                  addData(newData).then((value) {
+                                    setState(() {
+                                    });
+                                    ScaffoldMessenger.of(context).showSnackBar(
+                                      SnackBar(
+                                        content: Text(
+                                          value,
+                                        ),
+                                      ),
+                                    );
+                                  });
+                                }
                               },
                               child: const Text("Submit"),
                               style: ButtonStyle(
@@ -372,7 +377,7 @@ class LayananIsolasi extends State<LayananIsolasiState> {
                             ),
                           ),
                           FutureBuilder<List<Data>>(
-                              future: _data,
+                              future: getData(),
                               builder: (context, snapshot) {
                                 if (snapshot.hasData) {
                                   final List<Data>? listData = snapshot.data;
