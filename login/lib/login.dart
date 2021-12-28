@@ -1,10 +1,14 @@
+// ignore_for_file: deprecated_member_use
+
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(LoginApp());
+  runApp(const LoginApp());
 }
 
 class LoginApp extends StatelessWidget {
+  const LoginApp({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -14,53 +18,53 @@ class LoginApp extends StatelessWidget {
           child: Center(
             child: Column(
               children: [
-                Text(
+                const Text(
                   'Login',
                   style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
                 ),
-                SizedBox(height: 20),
+                const SizedBox(height: 20),
                 Column(
                   children: [
                     TextFormField(
                       decoration: InputDecoration(
-                        fillColor: Color(0xffF1F0F5),
+                        fillColor: const Color(0xffF1F0F5),
                         filled: true,
                         enabledBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(20),
-                          borderSide: BorderSide(),
+                          borderSide: const BorderSide(),
                         ),
                         focusedBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(20),
-                          borderSide: BorderSide(),
+                          borderSide: const BorderSide(),
                         ),
                         labelText: 'Username',
                       ),
                     ),
-                    Divider(),
+                    const Divider(),
         TextFormField(
                       decoration: InputDecoration(
-                        fillColor: Color(0xffF1F0F5),
+                        fillColor: const Color(0xffF1F0F5),
                         filled: true,
                         enabledBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(20),
-                          borderSide: BorderSide(),
+                          borderSide: const BorderSide(),
                         ),
                         focusedBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(20),
-                          borderSide: BorderSide(),
+                          borderSide: const BorderSide(),
                         ),
                         labelText: 'Password',
                       ),
                     ),
-                    Divider(),
+                    const Divider(),
             RaisedButton(
                           onPressed: () {
-                            print("Raised Button");
+                            debugPrint("Raised Button");
                           },
                           color: Colors.blue,
                           shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(5)),
-                          child: Text(
+                          child: const Text(
                             'Log In',
                             style: TextStyle(color: Colors.white),
                           ),

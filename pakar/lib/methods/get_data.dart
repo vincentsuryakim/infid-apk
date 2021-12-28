@@ -13,12 +13,12 @@ Future<List<Regist>> fetchArtikel(String query) async {
   );
 
   var data = jsonDecode(utf8.decode(response.bodyBytes));
-  List<Regist> tim_pakar = [];
+  List<Regist> timPakar = [];
   for (var d in data) {
     if (d != null) {
-      tim_pakar.add(Regist.fromJson(d));
+      timPakar.add(Regist.fromJson(d));
     }
   }
 
-  return tim_pakar;
+  return timPakar;
 }
