@@ -331,10 +331,6 @@ class LayananIsolasi extends State<LayananIsolasiState> {
                             padding: const EdgeInsets.all(10.0),
                             child: ElevatedButton(
                               onPressed: () {
-                                print(namaLengkap.text);
-                                print(umur.text);
-                                print(kotaKabupaten.text);
-                                print(namaIbuKandung.text);
                                 Data newData = Data(
                                   namaLengkap: namaLengkap.text,
                                   umur: umur.text,
