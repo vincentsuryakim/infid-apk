@@ -7,6 +7,8 @@ import 'package:pakar/screens/tim_pakar_covid_page.dart';
 
 
 class FormPakar extends StatefulWidget {
+  const FormPakar({Key? key}) : super(key: key);
+
   @override
   _FormPakar createState() => _FormPakar();
 }
@@ -22,10 +24,10 @@ class _FormPakar extends State<FormPakar> {
   Widget build(BuildContext context) {
     return Scaffold(
     appBar: AppBar(
-      backgroundColor: Color(0xff222831),
+      backgroundColor: const Color(0xff222831),
         title: Text("Pendaftaran Tim Pakar Covid-19 Indonesia",
          style: GoogleFonts.poppins(
-            textStyle: TextStyle(color: Colors.white, letterSpacing: .5, fontWeight: FontWeight.bold),
+            textStyle: const TextStyle(color: Colors.white, letterSpacing: .5, fontWeight: FontWeight.bold),
           ),),
       ),
       body: Form(

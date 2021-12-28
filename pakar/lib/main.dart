@@ -1,15 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:pakar/screens/forms.dart';
 import 'package:pakar/screens/tim_pakar_covid_page.dart';
 //import 'package:lab_6/login.dart';
 
 
 void main() {
-  runApp(const MyApp());
+  runApp(const TimPakarCovidApp());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+class TimPakarCovidApp extends StatelessWidget {
+  const TimPakarCovidApp({Key? key}) : super(key: key);
 
   // This widget is the root of your application.
   @override
@@ -28,7 +27,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-        home: TimPakarCovidPage(),
+        home: const TimPakarCovidPage(),
     );
   }
 }

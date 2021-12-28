@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:pakar/models/tim_pakar_models.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:pakar/screens/tim_pakar_covid_page.dart';
 
 
 Widget buildArticleItem(BuildContext context, Regist regist) {
