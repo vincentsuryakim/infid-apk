@@ -103,7 +103,7 @@ packages:
     source: sdk
     version: "0.0.0"
   google_fonts:
-    dependency: transitive
+    dependency: "direct main"
     description:
       name: google_fonts
       url: "https://pub.dartlang.org"
@@ -123,10 +123,17 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "4.0.0"
-  layananisolasi:
+  infid_apk:
     dependency: "direct main"
     description:
-      path: layananisolasi
+      path: ".."
+      relative: true
+    source: path
+    version: "1.0.0+1"
+  layananisolasi:
+    dependency: transitive
+    description:
+      path: "../layananisolasi"
       relative: true
     source: path
     version: "0.0.1"
@@ -151,13 +158,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.7.0"
-  pakar:
-    dependency: "direct main"
-    description:
-      path: pakar
-      relative: true
-    source: path
-    version: "0.0.1"
   path:
     dependency: transitive
     description:
@@ -178,7 +178,7 @@ packages:
       name: path_provider_android
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "2.0.11"
+    version: "2.0.9"
   path_provider_ios:
     dependency: transitive
     description:
@@ -236,9 +236,9 @@ packages:
     source: hosted
     version: "4.2.4"
   sebaran:
-    dependency: "direct main"
+    dependency: transitive
     description:
-      path: sebaran
+      path: "../sebaran"
       relative: true
     source: path
     version: "0.0.1"
@@ -309,7 +309,7 @@ packages:
       name: win32
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "2.3.3"
+    version: "2.3.2"
   xdg_directories:
     dependency: transitive
     description:
