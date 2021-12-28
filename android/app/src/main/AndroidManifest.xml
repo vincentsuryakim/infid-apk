@@ -1,5 +1,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.infid_apk">
+    <uses-permission android:name="android.permission.INTERNET" />
    <application
         android:label="infid_apk"
         android:icon="@mipmap/ic_launcher">
