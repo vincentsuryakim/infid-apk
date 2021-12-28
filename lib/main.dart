@@ -132,12 +132,19 @@ class MainPage extends StatelessWidget {
                           ),
                           Padding(
                             padding: const EdgeInsets.only(left: 8),
-                            child: RaisedButton(
-                              onPressed: () {
-                              },
-                              color: const Color(0xff00ADB5),
-                              shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(5)),
+                            child: ElevatedButton(
+                              onPressed: () {},
+                              style: ButtonStyle(
+                                backgroundColor: MaterialStateProperty.all(
+                                  const Color(0xff00ADB5),
+                                ),
+                                shape: MaterialStateProperty.all<
+                                    RoundedRectangleBorder>(
+                                  RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(5),
+                                  ),
+                                ),
+                              ),
                               child: const Text(
                                 "Log In",
                                 style: TextStyle(color: Colors.black),
