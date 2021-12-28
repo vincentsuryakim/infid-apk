@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:pakar/main.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:pakar/screens/forms.dart';
 //import 'package:lab_7/screens/drawer.dart';
 import 'package:pakar/widgets/carousel.dart';
+import 'package:infid_apk/navbar.dart';
+
 
 
 class TimPakarCovidPage extends StatefulWidget {
@@ -18,122 +19,33 @@ class _TimPakarCovidPage extends State<TimPakarCovidPage>{
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Color(0xff222831),
+        backgroundColor: const Color(0xff222831),
         title: Text(
           'Tim Pakar Covid-19 Indonesia',
            style: GoogleFonts.poppins(
-            textStyle: TextStyle(color: Colors.white, letterSpacing: .5, fontWeight: FontWeight.bold),
+            textStyle: const TextStyle(color: Colors.white, letterSpacing: .5, fontWeight: FontWeight.bold),
           ),
       ),
       ),
+      drawer: const DrawerScreen(),
 
-      drawer: Drawer(
-        child: ListView(
-          // Important: Remove any padding from the ListView.
-          padding: EdgeInsets.zero,
-          children: <Widget>[
-            // ignore: sized_box_for_whitespace
-            Container(
-              height: 64,
-              child:  DrawerHeader(
-                child: Text(
-                  'Infid',
-                  style: GoogleFonts.poppins(
-                    textStyle: TextStyle(
-                    color: Colors.white,
-                    fontWeight: FontWeight.bold,
-                    fontSize: 25,
-                    ),
-                  ),
-                ),
-                decoration: BoxDecoration(
-                  color: Color(0xff222831),
-                ),
-              ),
-            ),
-            ListTile(
-              title: const Text('Home Page'),
-              onTap: () {
-                // Go to Riwayat Jurnal screen
-                Navigator.pop(context);
-              },
-            ),
-            ListTile(
-              title: const Text('Vaksinasi Covid-19'),
-              onTap: () {
-                // Go to Jurnal Baru page
-                  Navigator.pop(context);
-
-                
-              },
-            ),
-            ListTile(
-              title: const Text('Layanan Isolasi Mandiri'),
-              onTap: () {
-                // Go to Jurnal Baru page
-                  Navigator.pop(context);
-
-                
-              },
-            ),
-            ListTile(
-              title: const Text('Rumah Sakit Rujukan'),
-              onTap: () {
-                // Go to Jurnal Baru page
-                  Navigator.pop(context);
-
-                
-              },
-            ),
-            ListTile(
-              title: const Text('Tim Pakar Covid-19'),
-              onTap: () {
-                // Go to Jurnal Baru page
-                  Navigator.pop(context);
-
-                
-              },
-            ),
-            ListTile(
-              title: const Text('Kontak Layanan'),
-              onTap: () {
-                // Go to Jurnal Baru page
-                  Navigator.pop(context);
-
-                
-              },
-            ),
-            ListTile(
-              title: const Text('Edukasi Protokol'),
-              onTap: () {
-                // Go to Jurnal Baru page
-                  Navigator.pop(context);
-
-                
-              },
-            ),
-
-            
-          ],
-        ),
-      ),
       body: SingleChildScrollView(
         child: Column(
           children: [
             Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-            Carousel(),
-            SizedBox(height: 18),
+            const Carousel(),
+            const SizedBox(height: 18),
             Padding(
-              padding: EdgeInsets.all(16.0),
+              padding: const EdgeInsets.all(16.0),
               child: Text(
                 "Tim Pakar Covid-19 Indonesia",
                 textAlign: TextAlign.center,
-                style: GoogleFonts.poppins(textStyle: TextStyle(
+                style: GoogleFonts.poppins(textStyle: const TextStyle(
                     fontWeight: FontWeight.bold, fontSize: 32, color: Colors.black)),
               ),
             ),    
              Padding(
-              padding: EdgeInsets.all(16.0),
+              padding: const EdgeInsets.all(16.0),
               child: Text(
                 '"Wherever the art of Medicine is loved, there is also a love of Humanity.”\n - Hippocrate',
                 textAlign: TextAlign.center,
@@ -141,13 +53,13 @@ class _TimPakarCovidPage extends State<TimPakarCovidPage>{
               ),
             ),    
         
-          Divider(),
+          const Divider(),
             Card(
               clipBehavior: Clip.antiAlias,
                 child: Column(
                   children: [
                     ListTile(
-                      leading: Icon(Icons.arrow_drop_down_circle),
+                      leading: const Icon(Icons.arrow_drop_down_circle),
                       title:  Text('Prof. Drh. Wiku Adisasmito, M.Sc., Ph.D.', style: GoogleFonts.poppins()),
                       
                     ),
@@ -166,7 +78,7 @@ class _TimPakarCovidPage extends State<TimPakarCovidPage>{
                 child: Column(
                   children: [
                     ListTile(
-                      leading: Icon(Icons.arrow_drop_down_circle),
+                      leading: const Icon(Icons.arrow_drop_down_circle),
                       title:  Text('Prof. Dr. dr. Akmal Taher, Sp.U(K)', style: GoogleFonts.poppins()),
                       
                     ),
@@ -192,7 +104,7 @@ class _TimPakarCovidPage extends State<TimPakarCovidPage>{
         backgroundColor: const Color(0xff222831),
         onPressed: () {
           Navigator.push(context,
-              MaterialPageRoute(builder: (context) =>  FormPakar()));
+              MaterialPageRoute(builder: (context) =>  const FormPakar()));
         },
         tooltip: 'Daftar Menjadi Pakar',
         child: const Icon(Icons.add),
