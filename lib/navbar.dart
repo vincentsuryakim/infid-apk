@@ -47,66 +47,6 @@ class _DrawerScreenState extends State<DrawerScreen> {
                     ),
                   ],
                 ),
-<<<<<<< HEAD
-              );
-            },
-          ),
-          DrawerListTile(
-            iconData: Icons.healing_outlined,
-            title: "Layanan Isolasi Mandiri",
-            onTilePressed: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => const LayananIsolasiState(),
-                ),
-              );
-            },
-          ),
-          DrawerListTile(
-            iconData: Icons.coronavirus,
-            title: "Vaksinasi COVID-19",
-            onTilePressed: () {},
-          ),
-          DrawerListTile(
-            iconData: Icons.local_hospital,
-            title: "Rumah Sakit Rujukan",
-            onTilePressed: () {},
-          ),
-          DrawerListTile(
-            iconData: Icons.person_rounded,
-            title: "Tim Pakar COVID-19",
-            onTilePressed: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => const TimPakarCovidApp(),
-                ),
-              );
-            },
-          ),
-          DrawerListTile(
-            iconData: Icons.contact_page,
-            title: "Kontak Layanan",
-            onTilePressed: () {},
-          ),
-          DrawerListTile(
-            iconData: Icons.bar_chart,
-            title: "Persebaran Data",
-            onTilePressed: () {},
-          ),
-          DrawerListTile(
-            iconData: Icons.health_and_safety_outlined,
-            title: "Edukasi Protokol",
-            onTilePressed: () {},
-          ),
-          DrawerListTile(
-            iconData: Icons.login,
-            title: "Login",
-            onTilePressed: () {},
-          ),
-        ],
-=======
                 Padding(
                     padding: const EdgeInsets.only(right: 35, top: 35),
                     child: ElevatedButton(
@@ -161,7 +101,14 @@ class _DrawerScreenState extends State<DrawerScreen> {
             DrawerListTile(
               iconData: Icons.person_rounded,
               title: "Tim Pakar COVID-19",
-              onTilePressed: () {},
+              onTilePressed: () {
+                 Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const TimPakarCovidApp(),
+                  ),
+                );
+              },
             ),
             DrawerListTile(
               iconData: Icons.contact_page,
@@ -197,7 +144,6 @@ class _DrawerScreenState extends State<DrawerScreen> {
                 "https://gitlab.com/zeta.prawira/pbp-lab/-/raw/master/lab_6/lab_6/images/CovidIcon.png")
           ],
         ),
->>>>>>> e16c613b84fed9328766f8a34c72e944ed5c892c
       ),
     );
   }
