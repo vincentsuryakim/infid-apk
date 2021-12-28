@@ -350,8 +350,7 @@ class LayananIsolasi extends State<LayananIsolasiState> {
                                     namaIbuKandung: namaIbuKandung.text,
                                   );
                                   addData(newData).then((value) {
-                                    setState(() {
-                                    });
+                                    setState(() {});
                                     ScaffoldMessenger.of(context).showSnackBar(
                                       SnackBar(
                                         content: Text(
