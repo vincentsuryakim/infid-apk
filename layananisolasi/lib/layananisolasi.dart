@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:infid_apk/navbar.dart';
-
 import 'get_add_data.dart';
 import 'models.dart';
 
