@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:layananisolasi/layananisolasi.dart';
 import 'package:pakar/main.dart';
+import 'package:sebaran/sebaran.dart';
 import 'main.dart';
 
 class DrawerScreen extends StatefulWidget {
@@ -118,7 +119,12 @@ class _DrawerScreenState extends State<DrawerScreen> {
             DrawerListTile(
               iconData: Icons.bar_chart,
               title: "Persebaran Data",
-              onTilePressed: () {},
+              onTilePressed: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const SebaranApp()));
+              },
             ),
             DrawerListTile(
               iconData: Icons.health_and_safety_outlined,
