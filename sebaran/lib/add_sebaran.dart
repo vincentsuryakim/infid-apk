@@ -105,108 +105,111 @@ class _AddSebaranState extends State<AddSebaran> {
         ),
       ),
       body: Center(
-        child: FractionallySizedBox(
-          widthFactor: 0.9,
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: <Widget>[
-              TextFormField(
-                onChanged: (String value) {
-                  _updateProvinsi(value);
-                },
-                keyboardType: TextInputType.text,
-                decoration: const InputDecoration(
-                  labelText: 'Provinsi',
-                  border: OutlineInputBorder(),
-                  prefixIcon: Icon(Icons.public),
+        child: SingleChildScrollView(
+          scrollDirection: Axis.vertical,
+          child: FractionallySizedBox(
+            widthFactor: 0.9,
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                TextFormField(
+                  onChanged: (String value) {
+                    _updateProvinsi(value);
+                  },
+                  keyboardType: TextInputType.text,
+                  decoration: const InputDecoration(
+                    labelText: 'Provinsi',
+                    border: OutlineInputBorder(),
+                    prefixIcon: Icon(Icons.public),
+                  ),
                 ),
-              ),
-              const SizedBox(
-                height: 15,
-              ),
-              TextFormField(
-                onChanged: (String value) {
-                  _updateTerkonfirmasi(value);
-                },
-                keyboardType: TextInputType.number,
-                decoration: const InputDecoration(
-                  labelText: 'Terkonfirmasi',
-                  border: OutlineInputBorder(),
-                  prefixIcon: Icon(Icons.edit_rounded),
+                const SizedBox(
+                  height: 15,
                 ),
-              ),
-              const SizedBox(
-                height: 15,
-              ),
-              TextFormField(
-                onChanged: (String value) {
-                  _updateAktif(value);
-                },
-                keyboardType: TextInputType.number,
-                decoration: const InputDecoration(
-                  labelText: 'Kasus Aktif',
-                  border: OutlineInputBorder(),
-                  prefixIcon: Icon(Icons.edit_rounded),
+                TextFormField(
+                  onChanged: (String value) {
+                    _updateTerkonfirmasi(value);
+                  },
+                  keyboardType: TextInputType.number,
+                  decoration: const InputDecoration(
+                    labelText: 'Terkonfirmasi',
+                    border: OutlineInputBorder(),
+                    prefixIcon: Icon(Icons.edit_rounded),
+                  ),
                 ),
-              ),
-              const SizedBox(
-                height: 15,
-              ),
-              TextFormField(
-                onChanged: (String value) {
-                  _updateSembuh(value);
-                },
-                keyboardType: TextInputType.number,
-                decoration: const InputDecoration(
-                  labelText: 'Sembuh',
-                  border: OutlineInputBorder(),
-                  prefixIcon: Icon(Icons.edit_rounded),
+                const SizedBox(
+                  height: 15,
                 ),
-              ),
-              const SizedBox(
-                height: 15,
-              ),
-              TextFormField(
-                onChanged: (String value) {
-                  _updateMeninggal(value);
-                },
-                keyboardType: TextInputType.number,
-                decoration: const InputDecoration(
-                  labelText: 'Meninggal',
-                  border: OutlineInputBorder(),
-                  prefixIcon: Icon(Icons.edit_rounded),
+                TextFormField(
+                  onChanged: (String value) {
+                    _updateAktif(value);
+                  },
+                  keyboardType: TextInputType.number,
+                  decoration: const InputDecoration(
+                    labelText: 'Kasus Aktif',
+                    border: OutlineInputBorder(),
+                    prefixIcon: Icon(Icons.edit_rounded),
+                  ),
                 ),
-              ),
-              const SizedBox(
-                height: 15,
-              ),
-              Container(
-                clipBehavior: Clip.antiAliasWithSaveLayer,
-                width: double.infinity,
-                height: 60,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(10),
+                const SizedBox(
+                  height: 15,
                 ),
-                child: MaterialButton(
-                  onPressed: () => _submitData(),
-                  color: Colors.blue,
-                  child: const Text(
-                    'Tambahkan',
-                    style: TextStyle(
-                      fontSize: 20,
-                      color: Colors.white,
+                TextFormField(
+                  onChanged: (String value) {
+                    _updateSembuh(value);
+                  },
+                  keyboardType: TextInputType.number,
+                  decoration: const InputDecoration(
+                    labelText: 'Sembuh',
+                    border: OutlineInputBorder(),
+                    prefixIcon: Icon(Icons.edit_rounded),
+                  ),
+                ),
+                const SizedBox(
+                  height: 15,
+                ),
+                TextFormField(
+                  onChanged: (String value) {
+                    _updateMeninggal(value);
+                  },
+                  keyboardType: TextInputType.number,
+                  decoration: const InputDecoration(
+                    labelText: 'Meninggal',
+                    border: OutlineInputBorder(),
+                    prefixIcon: Icon(Icons.edit_rounded),
+                  ),
+                ),
+                const SizedBox(
+                  height: 15,
+                ),
+                Container(
+                  clipBehavior: Clip.antiAliasWithSaveLayer,
+                  width: double.infinity,
+                  height: 60,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                  child: MaterialButton(
+                    onPressed: () => _submitData(),
+                    color: Colors.blue,
+                    child: const Text(
+                      'Tambahkan',
+                      style: TextStyle(
+                        fontSize: 20,
+                        color: Colors.white,
+                      ),
                     ),
                   ),
                 ),
-              ),
-              const SizedBox(
-                height: 20,
-              ),
-              Text(
-                _status,
-                style: Theme.of(context).textTheme.subtitle2,
-              ),
-            ],
+                const SizedBox(
+                  height: 20,
+                ),
+                Text(
+                  _status,
+                  style: Theme.of(context).textTheme.subtitle2,
+                ),
+              ],
+            ),
           ),
         ),
       ),

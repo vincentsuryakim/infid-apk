@@ -82,22 +82,30 @@ class _MySebaranState extends State<MySebaran> {
             .format(extractedData['terkonfirmasi'])
             .replaceAll(RegExp(r','), '.'),
         background: "sebaran/covid.jpeg",
+        backgroundLink:
+            "https://gitlab.com/vincent.suryakim/pbp-lab/-/raw/master/lab_6/assets/images/covid.jpeg",
       ));
       widgets.add(GlobalInfoWidget(
         judul: 'Kasus Aktif',
         jumlah: f.format(extractedData['aktif']).replaceAll(RegExp(r','), '.'),
         background: "sebaran/aktif.png",
+        backgroundLink:
+            "https://gitlab.com/vincent.suryakim/pbp-lab/-/raw/master/lab_6/assets/images/aktif.png",
       ));
       widgets.add(GlobalInfoWidget(
         judul: 'Sembuh',
         jumlah: f.format(extractedData['sembuh']).replaceAll(RegExp(r','), '.'),
         background: "sebaran/sembuh.png",
+        backgroundLink:
+            "https://gitlab.com/vincent.suryakim/pbp-lab/-/raw/master/lab_6/assets/images/sembuh.png",
       ));
       widgets.add(GlobalInfoWidget(
         judul: 'Meninggal',
         jumlah:
             f.format(extractedData['meninggal']).replaceAll(RegExp(r','), '.'),
         background: "sebaran/meninggal.jpg",
+        backgroundLink:
+            "https://gitlab.com/vincent.suryakim/pbp-lab/-/raw/master/lab_6/assets/images/meninggal.jpg",
       ));
       widgets.add(const SizedBox(height: 40));
       widgets.add(const Text(
