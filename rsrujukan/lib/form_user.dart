@@ -1,6 +1,4 @@
 import 'dart:convert';
-
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'models.dart';
 import 'package:http/http.dart' as http;
@@ -29,7 +27,6 @@ class _FormRSState extends State<FormRS> {
   TextEditingController tempatControl = TextEditingController();
   TextEditingController alamatControl = TextEditingController();
   TextEditingController noTelfonControl = TextEditingController();
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -109,7 +106,7 @@ class _FormRSState extends State<FormRS> {
                       controller: noTelfonControl,
                       decoration: const InputDecoration(
                         border: OutlineInputBorder(),
-                        labelText: 'Nomor Telfon RS',
+                        labelText: 'Nomor telfon RS',
                         isDense: true,
                       ),
                     ),
