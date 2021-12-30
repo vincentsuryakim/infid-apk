@@ -35,6 +35,8 @@ dependencies:
     path: pakar
   layananisolasi:
     path: layananisolasi
+  vaksincovid:
+    path: vaksincovid
 
   carousel_slider: ^4.0.0
   # The following adds the Cupertino Icons font to your application.

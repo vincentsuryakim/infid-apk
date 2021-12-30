@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:vaksincovid/screens/vaksincovidpage.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(const vaksinApp());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+class vaksinApp extends StatelessWidget {
+  const vaksinApp({Key? key}) : super(key: key);
 
   // This widget is the root of your application.
   @override

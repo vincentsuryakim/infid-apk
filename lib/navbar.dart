@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:layananisolasi/layananisolasi.dart';
 import 'package:pakar/main.dart';
+import 'package:vaksincovid/vaksincovidmain.dart';
 import 'main.dart';
 
 class DrawerScreen extends StatefulWidget {
@@ -96,7 +97,14 @@ class _DrawerScreenState extends State<DrawerScreen> {
             DrawerListTile(
               iconData: Icons.local_hospital,
               title: "Rumah Sakit Rujukan",
-              onTilePressed: () {},
+              onTilePressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const vaksinApp(),
+                  ),
+                );
+              },
             ),
             DrawerListTile(
               iconData: Icons.person_rounded,
