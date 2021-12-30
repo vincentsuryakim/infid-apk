@@ -3,6 +3,8 @@ import 'dart:convert';
 import 'package:http/http.dart' as http;
 import 'package:intl/intl.dart';
 
+import 'package:infid_apk/navbar.dart';
+
 import 'add_sebaran.dart';
 import 'widgets/global_info.dart';
 
@@ -160,11 +162,8 @@ class _MySebaranState extends State<MySebaran> {
         appBar: AppBar(
           title: const Text('Persebaran Covid-19'),
           backgroundColor: const Color(0xff222831),
-          leading: IconButton(
-            icon: const Icon(Icons.arrow_back),
-            onPressed: () => Navigator.pop(context),
-          ),
         ),
+        drawer: const DrawerScreen(),
         body: SingleChildScrollView(
           child: SizedBox(
             width: double.infinity,
