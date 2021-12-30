@@ -27,7 +27,6 @@ class _FormRSState extends State<FormRS> {
   TextEditingController tempatControl = TextEditingController();
   TextEditingController alamatControl = TextEditingController();
   TextEditingController noTelfonControl = TextEditingController();
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
