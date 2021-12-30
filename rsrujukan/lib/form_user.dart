@@ -106,7 +106,7 @@ class _FormRSState extends State<FormRS> {
                       controller: noTelfonControl,
                       decoration: const InputDecoration(
                         border: OutlineInputBorder(),
-                        labelText: 'Nomor Telfon RS',
+                        labelText: 'Nomor telfon RS',
                         isDense: true,
                       ),
                     ),
