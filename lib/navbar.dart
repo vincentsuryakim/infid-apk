@@ -5,6 +5,8 @@ import 'package:sebaran/sebaran.dart';
 import 'package:rsrujukan/rsrujukan.dart';
 import 'main.dart';
 
+import 'package:flutter/foundation.dart' show kIsWeb;
+
 class DrawerScreen extends StatefulWidget {
   const DrawerScreen({Key? key}) : super(key: key);
 
@@ -152,7 +154,10 @@ class _DrawerScreenState extends State<DrawerScreen> {
                       fontStyle: FontStyle.italic,
                       color: Colors.white),
                 )),
-            Image.asset("main/CovidIcon.png")
+            kIsWeb
+                ? Image.asset("main/CovidIcon.png")
+                : Image.network(
+                    "https://gitlab.com/zeta.prawira/pbp-lab/-/raw/master/lab_6/lab_6/images/CovidIcon.png"),
           ],
         ),
       ),
