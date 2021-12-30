@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'navbar.dart';
 
+import 'package:flutter/foundation.dart' show kIsWeb;
+
 void main() {
   runApp(const MyApp());
 }
@@ -85,9 +87,15 @@ class MainPage extends StatelessWidget {
                             scrollDirection: Axis.horizontal,
                           ),
                           items: [
-                            'assets/main/Covid1.png',
-                            'assets/main/Covid2.png',
-                            'assets/main/Covid3.png',
+                            kIsWeb
+                                ? 'assets/main/Covid1.png'
+                                : 'https://gitlab.com/zeta.prawira/pbp-lab/-/raw/master/lab_6/lab_6/images/Covid1.png',
+                            kIsWeb
+                                ? 'assets/main/Covid2.png'
+                                : 'https://gitlab.com/zeta.prawira/pbp-lab/-/raw/master/lab_6/lab_6/images/Covid2.png',
+                            kIsWeb
+                                ? 'assets/main/Covid3.png'
+                                : 'https://gitlab.com/zeta.prawira/pbp-lab/-/raw/master/lab_6/lab_6/images/Covid3.png',
                           ].map((i) {
                             return Builder(
                               builder: (BuildContext context) {
@@ -173,28 +181,53 @@ class MainPage extends StatelessWidget {
                         child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceAround,
                             children: [
-                              Image.asset(
-                                'main/kemenkes.png',
-                                height: 30,
-                              ),
-                              Image.asset(
-                                'main/kominfo.png',
-                                height: 30,
-                              ),
-                              Image.asset(
-                                'main/Kantor_Staf_Presiden.png',
-                                height: 30,
-                              ),
+                              kIsWeb
+                                  ? Image.asset(
+                                      'main/kemenkes.png',
+                                      height: 30,
+                                    )
+                                  : Image.network(
+                                      'https://gitlab.com/zeta.prawira/pbp-lab/-/raw/master/lab_6/lab_6/images/kemenkes.png',
+                                      height: 30,
+                                    ),
+                              kIsWeb
+                                  ? Image.asset(
+                                      'main/kominfo.png',
+                                      height: 30,
+                                    )
+                                  : Image.network(
+                                      'https://gitlab.com/zeta.prawira/pbp-lab/-/raw/master/lab_6/lab_6/images/kominfo.png',
+                                      height: 30,
+                                    ),
+                              kIsWeb
+                                  ? Image.asset(
+                                      'main/Kantor_Staf_Presiden.png',
+                                      height: 30,
+                                    )
+                                  : Image.network(
+                                      'https://gitlab.com/zeta.prawira/pbp-lab/-/raw/master/lab_6/lab_6/images/Kantor_Staf_Presiden.png',
+                                      height: 30,
+                                    ),
                               ClipRRect(
                                   borderRadius: BorderRadius.circular(5),
-                                  child: Image.asset(
-                                    'main/logo-bumn-vector-terbaru.jpeg',
-                                    height: 30,
-                                  )),
-                              Image.asset(
-                                'main/polri.png',
-                                height: 30,
-                              ),
+                                  child: kIsWeb
+                                      ? Image.asset(
+                                          'main/logo-bumn-vector-terbaru.jpeg',
+                                          height: 30,
+                                        )
+                                      : Image.network(
+                                          'https://gitlab.com/zeta.prawira/pbp-lab/-/raw/master/lab_6/lab_6/images/logo-bumn-vector-terbaru.jpg',
+                                          height: 30,
+                                        )),
+                              kIsWeb
+                                  ? Image.asset(
+                                      'main/polri.png',
+                                      height: 30,
+                                    )
+                                  : Image.network(
+                                      'https://gitlab.com/zeta.prawira/pbp-lab/-/raw/master/lab_6/lab_6/images/polri.png',
+                                      height: 30,
+                                    ),
                             ])),
                   ],
                 ),
