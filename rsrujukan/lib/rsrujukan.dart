@@ -2,14 +2,9 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:url_launcher/link.dart';
-import 'package:url_launcher/url_launcher.dart';
 
 import 'form_user.dart';
 import 'models.dart';
-
-// void main() => runApp(const MaterialApp(
-//       home: RSRujukanState(),
-//     ));
 
 class RSRujukanState extends StatefulWidget {
   const RSRujukanState({Key? key}) : super(key: key);
@@ -19,7 +14,7 @@ class RSRujukanState extends StatefulWidget {
 }
 
 class RSRujukan extends State<RSRujukanState> {
-  List<Data> _datas = <Data>[];
+  final List<Data> _datas = <Data>[];
 
   Future<List<Data>> fetchData() async {
     var url = Uri.parse('https://pbpempat.herokuapp.com/rsrujukan/get-rs/');
@@ -50,7 +45,7 @@ class RSRujukan extends State<RSRujukanState> {
         backgroundColor: const Color.fromRGBO(197, 203, 212, 0.4),
         appBar: AppBar(
           title: const Center(child: Text("Rumah Sakit Rujukan")),
-          backgroundColor: Color.fromRGBO(6, 59, 182, 1),
+          backgroundColor: const Color.fromRGBO(6, 59, 182, 1),
         ),
         body: ListView.builder(
           itemBuilder: (context, index) {
@@ -81,17 +76,18 @@ class RSRujukan extends State<RSRujukanState> {
                     ),
                   ),
                   Padding(
-                      padding: EdgeInsets.only(
+                      padding: const EdgeInsets.only(
                           top: 30, left: 15, right: 50, bottom: 10),
                       child: Link(
                         target: LinkTarget.blank,
                         uri: Uri.parse(
                             'https://pbpempat.herokuapp.com/rsrujukan/user_book/'),
                         builder: (context, followLink) => ElevatedButton(
-                            child: Text('Book'), onPressed: followLink),
+                            child: const Text('Book'), onPressed: followLink),
                       )),
                   Padding(
-                    padding: EdgeInsets.only(left: 15, right: 50, bottom: 10),
+                    padding:
+                        const EdgeInsets.only(left: 15, right: 50, bottom: 10),
                     child: ElevatedButton(
                         child: const Text(
                           "Tambah detail RS",
@@ -101,12 +97,10 @@ class RSRujukan extends State<RSRujukanState> {
                           Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => FormRS()));
+                                  builder: (context) => const FormRS()));
                         },
                         style: ElevatedButton.styleFrom(
-                          primary: Color.fromRGBO(6, 59, 182, 1),
-                          // minimumSize: Size(120, 30),
-                          // maximumSize: Size(120, 30),
+                          primary: const Color.fromRGBO(6, 59, 182, 1),
                         )),
                   ),
                 ],
@@ -116,13 +110,4 @@ class RSRujukan extends State<RSRujukanState> {
           itemCount: _datas.length,
         ));
   }
-
-  // launchURL() async {
-  //   final url_book = 'https://pbpempat.herokuapp.com/rsrujukan/user_book/';
-  //   if (await canLaunch(url_book)) {
-  //     await launch(url_book);
-  //   } else {
-  //     throw 'Gagal membuka $url_book';
-  //   }
-  // }
 }
