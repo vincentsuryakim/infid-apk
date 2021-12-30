@@ -100,7 +100,7 @@ class _DrawerScreenState extends State<DrawerScreen> {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => const vaksinApp(),
+                    builder: (context) => const VaksinApp(),
                   ),
                 );
               },

@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:vaksincovid/screens/vaksincovidpage.dart';
 
 void main() {
-  runApp(const vaksinApp());
+  runApp(const VaksinApp());
 }
 
-class vaksinApp extends StatelessWidget {
-  const vaksinApp({Key? key}) : super(key: key);
+class VaksinApp extends StatelessWidget {
+  const VaksinApp({Key? key}) : super(key: key);
 
   // This widget is the root of your application.
   @override
@@ -25,7 +25,7 @@ class vaksinApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: VaksinCovidPage(),
+      home: const VaksinCovidPage(),
     );
   }
 }

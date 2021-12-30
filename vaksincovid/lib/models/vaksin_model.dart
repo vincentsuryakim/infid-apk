@@ -1,4 +1,4 @@
-class vaksinData {
+class VaksinData {
   late String nama;
   late String deskripsi;
   late String usia;
@@ -6,7 +6,7 @@ class vaksinData {
   late String dosis1;
   late String dosis2;
 
-  vaksinData({
+  VaksinData({
     required this.nama,
     required this.deskripsi,
     required this.usia,
@@ -15,7 +15,7 @@ class vaksinData {
     required this.dosis2,
   });
 
-  factory vaksinData.fromJson(Map<String, dynamic> json) => vaksinData(
+  factory VaksinData.fromJson(Map<String, dynamic> json) => VaksinData(
         nama: json["fields"]["nama"],
         deskripsi: json["fields"]["deskripsi"],
         usia: json["fields"]["usia"],
