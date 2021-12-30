@@ -3,6 +3,7 @@ import 'dart:convert';
 import 'package:http/http.dart' as http;
 import 'package:intl/intl.dart';
 
+import 'add_sebaran.dart';
 import 'widgets/global_info.dart';
 
 void main() async {
@@ -15,12 +16,8 @@ class SebaranApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Persebaran Covid-19 Indonesia',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: const MySebaran(),
+    return const Scaffold(
+      body: MySebaran(),
     );
   }
 }
@@ -47,7 +44,7 @@ class _MySebaranState extends State<MySebaran> {
 
       List<Widget> widgets = [];
 
-      NumberFormat f = NumberFormat("#,###,000");
+      NumberFormat f = NumberFormat("#,###,##0");
 
       // print(extractedData);
 
@@ -85,22 +82,30 @@ class _MySebaranState extends State<MySebaran> {
             .format(extractedData['terkonfirmasi'])
             .replaceAll(RegExp(r','), '.'),
         background: "sebaran/covid.jpeg",
+        backgroundLink:
+            "https://gitlab.com/vincent.suryakim/pbp-lab/-/raw/master/lab_6/assets/images/covid.jpeg",
       ));
       widgets.add(GlobalInfoWidget(
         judul: 'Kasus Aktif',
         jumlah: f.format(extractedData['aktif']).replaceAll(RegExp(r','), '.'),
         background: "sebaran/aktif.png",
+        backgroundLink:
+            "https://gitlab.com/vincent.suryakim/pbp-lab/-/raw/master/lab_6/assets/images/aktif.png",
       ));
       widgets.add(GlobalInfoWidget(
         judul: 'Sembuh',
         jumlah: f.format(extractedData['sembuh']).replaceAll(RegExp(r','), '.'),
         background: "sebaran/sembuh.png",
+        backgroundLink:
+            "https://gitlab.com/vincent.suryakim/pbp-lab/-/raw/master/lab_6/assets/images/sembuh.png",
       ));
       widgets.add(GlobalInfoWidget(
         judul: 'Meninggal',
         jumlah:
             f.format(extractedData['meninggal']).replaceAll(RegExp(r','), '.'),
         background: "sebaran/meninggal.jpg",
+        backgroundLink:
+            "https://gitlab.com/vincent.suryakim/pbp-lab/-/raw/master/lab_6/assets/images/meninggal.jpg",
       ));
       widgets.add(const SizedBox(height: 40));
       widgets.add(const Text(
@@ -124,7 +129,12 @@ class _MySebaranState extends State<MySebaran> {
       widgets.add(const SizedBox(height: 20));
       widgets.add(ElevatedButton.icon(
         onPressed: () {
-          // Respond to button press
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) => const AddSebaranApp(),
+            ),
+          );
         },
         icon: const Icon(Icons.add, size: 18),
         label: const Text("ADD"),
@@ -140,9 +150,7 @@ class _MySebaranState extends State<MySebaran> {
 
       return wrapper;
     } catch (err) {
-      print(err);
-
-      return const Text("No data");
+      return const Text("An error occurred");
     }
   }
 
@@ -151,8 +159,9 @@ class _MySebaranState extends State<MySebaran> {
     return Scaffold(
         appBar: AppBar(
           title: const Text('Persebaran Covid-19'),
+          backgroundColor: const Color(0xff222831),
           leading: IconButton(
-            icon: const Icon(Icons.arrow_back, color: Colors.black),
+            icon: const Icon(Icons.arrow_back),
             onPressed: () => Navigator.pop(context),
           ),
         ),
