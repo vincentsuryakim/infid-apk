@@ -1,4 +1,4 @@
-name: sebaran
+name: rsrujukan
 description: A new Flutter package project.
 version: 0.0.1
 homepage:
@@ -10,9 +10,8 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  
-  http: ^0.13.4
-  intl: "^0.17.0"
+  http: any
+  url_launcher: ^6.0.12
 
 dev_dependencies:
   flutter_test:
