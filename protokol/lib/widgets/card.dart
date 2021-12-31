@@ -1,3 +1,4 @@
+import 'package:url_launcher/url_launcher.dart';
 import 'package:flutter/material.dart';
 import 'package:protokol/models/artikel.dart';
 
@@ -48,7 +49,9 @@ Widget ArtikelCard(BuildContext context, Artikel artikel) {
                           backgroundColor: MaterialStateProperty.all(
                               const Color(0xFF00ADB5)),
                         ),
-                        onPressed: () {},
+                        onPressed: () {
+                          _launchURL(artikel.artikelLink);
+                        },
                       ),
                     ),
                   ],
@@ -60,4 +63,8 @@ Widget ArtikelCard(BuildContext context, Artikel artikel) {
       ),
     ),
   );
+}
+
+void _launchURL(String url) async {
+  if (!await launch(url)) throw 'Could not launch $url';
 }

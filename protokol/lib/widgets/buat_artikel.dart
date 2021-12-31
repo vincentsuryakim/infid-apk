@@ -7,7 +7,7 @@ class BuatArtikel extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
-    return Container(
+    return SizedBox(
         height: 200,
         child: Stack(children: [
           Image.network(
@@ -18,7 +18,7 @@ class BuatArtikel extends StatelessWidget {
                   height: size.height,
                   child: SingleChildScrollView(
                     child: Column(children: [
-                      const Text("Hello, Tian!",
+                      const Text("Hello, Zeta!",
                           style: TextStyle(
                             fontSize: 18,
                             color: Colors.white,

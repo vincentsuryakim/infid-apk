@@ -17,18 +17,18 @@ class Artikel {
 
   factory Artikel.fromJson(Map<String, dynamic> json) => Artikel(
         judul: json["fields"]["judul"],
-        imageLink: json["fields"]["image_link"],
-        artikelLink: json["fields"]["artikel_link"],
-        tanggalPublish: json["fields"]["tanggal_publish"],
+        imageLink: json["fields"]["imageLink"],
+        artikelLink: json["fields"]["artikelLink"],
+        tanggalPublish: json["fields"]["tanggalPublish"],
         publisher: json["fields"]["publisher"],
         deskripsi: json["fields"]["deskripsi"],
       );
 
   Map<String, dynamic> toJson() => {
         "judul": judul,
-        "image_link": imageLink,
-        "artikel_link": artikelLink,
-        "tanggal_publish": tanggalPublish,
+        "imageLink": imageLink,
+        "artikelLink": artikelLink,
+        "tanggalPublish": tanggalPublish,
         "publisher": publisher,
         "deskripsi": deskripsi,
       };

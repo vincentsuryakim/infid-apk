@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:protokol/screen/drawer.dart';
+import 'package:infid_apk/navbar.dart';
 import 'package:protokol/screen/edukasi_protokol.dart';
 
 void main() {

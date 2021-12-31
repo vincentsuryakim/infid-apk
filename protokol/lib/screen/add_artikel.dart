@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-// import 'package:google_fonts/google_fonts.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:protokol/models/artikel.dart';
 import 'package:protokol/data/data.dart';
 import 'package:protokol/screen/edukasi_protokol.dart';
@@ -27,14 +27,14 @@ class _AddArtikel extends State<AddArtikel> {
     return Scaffold(
         appBar: AppBar(
           backgroundColor: const Color(0xff222831),
-          title: const Text(
+          title: Text(
             "Buat Artikel Edukasi Protokol COVID-19",
-            //style: GoogleFonts.poppins(
-            // textStyle: TextStyle(
-            //     color: Colors.white,
-            //     letterSpacing: .5,
-            //     fontWeight: FontWeight.bold),
-            // ),
+            style: GoogleFonts.poppins(
+              textStyle: const TextStyle(
+                  color: Colors.white,
+                  letterSpacing: .5,
+                  fontWeight: FontWeight.bold),
+            ),
           ),
         ),
         body: Form(

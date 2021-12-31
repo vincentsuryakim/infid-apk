@@ -1,6 +1,7 @@
 name: protokol
 description: A new Flutter package project.
 version: 0.0.1
+publish_to: 'none'
 homepage:
 
 environment:
@@ -13,6 +14,8 @@ dependencies:
   google_fonts: ^2.1.0
   cupertino_icons: ^1.0.2
   carousel_slider: ^4.0.0
+  infid_apk: 
+    path: ../.
 
 dev_dependencies:
   flutter_test:
