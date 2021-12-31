@@ -82,6 +82,7 @@ class _VaksinCovidPage extends State<VaksinCovidPage> {
                 return SingleChildScrollView(
                   scrollDirection: Axis.horizontal,
                   child: DataTable(
+                    dataRowHeight: 300,
                     columns: const <DataColumn>[
                       DataColumn(
                         label: Text(
@@ -123,11 +124,36 @@ class _VaksinCovidPage extends State<VaksinCovidPage> {
                     rows: listvaksin!
                         .map((vaksinData) => DataRow(cells: [
                               DataCell(Text(vaksinData.nama)),
-                              DataCell(Text(vaksinData.deskripsi)),
-                              DataCell(Text(vaksinData.usia)),
-                              DataCell(Text(vaksinData.jadwal)),
-                              DataCell(Text(vaksinData.dosis1)),
-                              DataCell(Text(vaksinData.dosis2)),
+                              DataCell(ConstrainedBox(
+                                  constraints: const BoxConstraints(
+                                      maxWidth: 300,
+                                      minWidth: 50), //SET max width
+                                  child: Text(vaksinData.deskripsi,
+                                      overflow: TextOverflow.visible))),
+                              DataCell(ConstrainedBox(
+                                  constraints: const BoxConstraints(
+                                      maxWidth: 100,
+                                      minWidth: 50), //SET max width
+                                  child: Text(vaksinData.usia,
+                                      overflow: TextOverflow.visible))),
+                              DataCell(ConstrainedBox(
+                                  constraints: const BoxConstraints(
+                                      maxWidth: 100,
+                                      minWidth: 50), //SET max width
+                                  child: Text(vaksinData.jadwal,
+                                      overflow: TextOverflow.visible))),
+                              DataCell(ConstrainedBox(
+                                  constraints: const BoxConstraints(
+                                      maxWidth: 100,
+                                      minWidth: 50), //SET max width
+                                  child: Text(vaksinData.dosis1,
+                                      overflow: TextOverflow.visible))),
+                              DataCell(ConstrainedBox(
+                                  constraints: const BoxConstraints(
+                                      maxWidth: 100,
+                                      minWidth: 50), //SET max width
+                                  child: Text(vaksinData.dosis2,
+                                      overflow: TextOverflow.visible))),
                             ]))
                         .toList(),
                   ),
