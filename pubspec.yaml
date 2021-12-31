@@ -37,6 +37,8 @@ dependencies:
     path: layananisolasi
   rsrujukan:
     path: rsrujukan
+  kontak:
+    path: kontak
 
   carousel_slider: ^4.0.0
   # The following adds the Cupertino Icons font to your application.
