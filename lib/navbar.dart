@@ -4,6 +4,8 @@ import 'package:pakar/main.dart';
 import 'package:vaksincovid/vaksincovidmain.dart';
 import 'package:sebaran/sebaran.dart';
 import 'package:rsrujukan/rsrujukan.dart';
+import 'package:kontak/kontak.dart';
+
 import 'main.dart';
 
 import 'package:flutter/foundation.dart' show kIsWeb;
@@ -130,7 +132,12 @@ class _DrawerScreenState extends State<DrawerScreen> {
             DrawerListTile(
               iconData: Icons.contact_page,
               title: "Kontak Layanan",
-              onTilePressed: () {},
+              onTilePressed: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const KontakLayananState()));
+              },
             ),
             DrawerListTile(
               iconData: Icons.bar_chart,
