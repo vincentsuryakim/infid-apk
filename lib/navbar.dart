@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:layananisolasi/layananisolasi.dart';
 import 'package:pakar/main.dart';
+import 'package:protokol/screen/edukasi_protokol.dart';
 import 'package:vaksincovid/vaksincovidmain.dart';
 import 'package:sebaran/sebaran.dart';
 import 'package:rsrujukan/rsrujukan.dart';
@@ -152,7 +153,12 @@ class _DrawerScreenState extends State<DrawerScreen> {
             DrawerListTile(
               iconData: Icons.health_and_safety_outlined,
               title: "Edukasi Protokol",
-              onTilePressed: () {},
+              onTilePressed: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const EdukasiProtokol()));
+              },
             ),
             DrawerListTile(
               iconData: Icons.login,
