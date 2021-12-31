@@ -1,4 +1,4 @@
-name: sebaran
+name: protokol
 description: A new Flutter package project.
 version: 0.0.1
 publish_to: 'none'
@@ -11,11 +11,11 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  infid_apk:
+  google_fonts: ^2.1.0
+  cupertino_icons: ^1.0.2
+  carousel_slider: ^4.0.0
+  infid_apk: 
     path: ../.
-  
-  http: ^0.13.4
-  intl: "^0.17.0"
 
 dev_dependencies:
   flutter_test:
@@ -28,11 +28,15 @@ dev_dependencies:
 # The following section is specific to Flutter.
 flutter:
 
+ # The following line ensures that the Material Icons font is
+  # included with your application, so that you can use the icons in
+  # the material Icons class.
+  uses-material-design: true
+
   # To add assets to your package, add an assets section, like this:
   # assets:
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg
-  #
   # For details regarding assets in packages, see
   # https://flutter.dev/assets-and-images/#from-packages
   #
