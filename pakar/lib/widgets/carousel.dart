@@ -11,7 +11,7 @@ class Carousel extends StatefulWidget {
 class _CarouselState extends State<Carousel> {
   final List<Widget> myData = [
     Stack(children: [
-      Image.asset('assets/images/dokterdokter.jpeg'),
+      Image.asset('main/dokterdokter.jpeg'),
     //   const Positioned(
     //     child: Text(
     //       "BE KIND",
@@ -28,7 +28,7 @@ class _CarouselState extends State<Carousel> {
     ]),
     Stack(
       children: [
-        Image.asset('assets/images/pakar.jpeg'),
+        Image.asset('main/pakar.jpeg'),
         // const Positioned(
         //   child: Text(
         //     "BE SAFE",
@@ -46,7 +46,7 @@ class _CarouselState extends State<Carousel> {
     ),
     Stack(
       children: [
-        Image.asset('assets/images/suntikan.jpeg'),
+        Image.asset('main/suntikan.jpeg'),
         // const Positioned(
         //   child: Text(
         //     "BE SMART",
