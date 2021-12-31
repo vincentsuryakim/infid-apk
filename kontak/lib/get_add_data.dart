@@ -14,7 +14,7 @@ Future<dynamic> addData(Data newData) async {
 }
 
 Future<List<Data>> getData() async {
-  var url = Uri.parse('https://pbpempat.herokuapp.com/kontak/json');
+  var url = Uri.parse('https://pbpempat.herokuapp.com/kontak/get-data');
   var response = await http.get(
     url,
     headers: {
