@@ -35,6 +35,8 @@ dependencies:
     path: pakar
   layananisolasi:
     path: layananisolasi
+  vaksincovid:
+    path: vaksincovid
   rsrujukan:
     path: rsrujukan
 

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:layananisolasi/layananisolasi.dart';
 import 'package:pakar/main.dart';
+import 'package:vaksincovid/vaksincovidmain.dart';
 import 'package:sebaran/sebaran.dart';
 import 'package:rsrujukan/rsrujukan.dart';
 import 'main.dart';
@@ -95,7 +96,14 @@ class _DrawerScreenState extends State<DrawerScreen> {
             DrawerListTile(
               iconData: Icons.coronavirus,
               title: "Vaksinasi COVID-19",
-              onTilePressed: () {},
+              onTilePressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const VaksinApp(),
+                  ),
+                );
+              },
             ),
             DrawerListTile(
               iconData: Icons.local_hospital,
